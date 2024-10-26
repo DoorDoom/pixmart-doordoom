@@ -1,0 +1,139 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__navigation {
+  flex-grow: 2;
+}
+.navigation__list {
+  display: flex;
+  list-style-type: none;
+  gap: 0.5rem;
+}
+
+.header__assets-block {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.main-information__main-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.main-buttons__button {
+  display: flex;
+}
+
+.products__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.categories__categories-cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.categories-card__description {
+  display: flex;
+  align-items: center;
+}
+
+.trending-header__trending-controller {
+  display: flex;
+  justify-content: space-between;
+}
+.trending__trending-list {
+  display: flex;
+}
+.trending-card__trending-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+.trending-information__description {
+  display: flex;
+  align-items: center;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.values-list__values-item {
+  display: flex;
+}
+
+.pricing__plan-list {
+  display: flex;
+}
+.plan-item__plan-features {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.plan-features__feature {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.plan-features__feature:before {
+  content: "\2713";
+  padding-right: 5px;
+}
+
+.faq {
+  display: flex;
+  justify-content: space-between;
+}
+.faq-questions__summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.articles__articles-header {
+  display: flex;
+  justify-content: space-between;
+}
+.articles-header__title {
+  display: none;
+}
+.articles__articles-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.articles__articles-list > li:nth-child(3n + 1) {
+  grid-row: span 2;
+}
+
+.footer__summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__cta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__documents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.document-list__list {
+  display: flex;
+  list-style-type: none;
+  gap: 0.5rem;
+}
