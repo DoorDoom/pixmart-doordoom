@@ -3,45 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="diploma project" />
+    <meta
+      name="description"
+      content="The homepage of Pixmart, that represents main features of the platform"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
     <title>Pixmart</title>
   </head>
   <body>
-    <header class="header">
-      <a href="./index.html" class="header__logo"
-        ><img src="./images/logo.svg" alt="logo"
-      /></a>
+    <header class="header list">
+      <a href="./index.html" class="header__logo">
+        <h1 class="logo">Pixmart.</h1>
+      </a>
       <nav class="header__navigation">
-        <ul class="navigation__list">
+        <ul class="navigation__list list">
           <li class="navigation__list-item">
-            <a href="#" target="_blank" class="navigation__link">About</a>
-          </li>
-          <li class="navigation__list-item">
-            <button class="navigation__popup-button">
-              Products
-              <img src="#" alt="arrow down" />
-            </button>
-          </li>
-          <li class="navigation__list-item">
-            <a href="#" target="_blank" class="navigation__link">Creators</a>
-          </li>
-          <li class="navigation__list-item">
-            <a href="#" target="_blank" class="navigation__link">Blog</a>
-          </li>
-          <li class="navigation__list-item">
-            <a href="./contacts.html" target="_blank" class="navigation__link"
-              >Contact</a
+            <a
+              href="#"
+              target="_blank"
+              class="navigation__link button button__small button__navigation"
             >
+              About
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              target="_blank"
+              class="navigation__link button button__small button__navigation"
+            >
+              Products
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              target="_blank"
+              class="navigation__link button button__small button__navigation"
+            >
+              Creators
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              target="_blank"
+              class="navigation__link button button__small button__navigation"
+            >
+              Blog
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="./contacts.html"
+              target="_blank"
+              class="navigation__link button button__small button__navigation"
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
-      <div class="header__assets-block">
-        <div class="assets-block__searching">
-          <input type="text" class="searching__input" />
-        </div>
-        <a href="#" class="assets-block__cart">
-          <img src="#" alt="buying assets" />
+      <div class="header__assets-block list">
+        <form action="#" method="get" class="assets-block__searching">
+          <label for="asset-searching" class="hidden">Find asset</label>
+          <input
+            type="text"
+            class="searching__input input input__small"
+            id="asset-searching"
+            placeholder="Search &#8239;for digital assets"
+          />
+          <!-- &#8239; - html code, which allow avoid text-transform: capitalize; rule -->
+          <button type="submit" class="hidden">Search</button>
+        </form>
+        <a
+          href="#"
+          class="assets-block__cart button button__primary button__square-medium"
+        >
+          <svg class="icon">
+            <use xlink:href="./images/icons/sprite.svg#bag"></use>
+          </svg>
         </a>
       </div>
     </header>
