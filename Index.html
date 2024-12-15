@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,15 +17,27 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/constants.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
     <title>Pixmart</title>
   </head>
-  <body>
+  <body class="container">
     <header class="header list">
       <a href="./index.html" class="header__logo">
-        <h1 class="logo">Pixmart.</h1>
+        <h1>
+          <img
+            src="./images/icons/logo.svg"
+            alt="Pixmart"
+            width="108"
+            height="24"
+          />
+        </h1>
       </a>
       <nav class="header__navigation">
         <ul class="navigation__list list">
@@ -83,9 +95,8 @@
             type="text"
             class="searching__input input input__small"
             id="asset-searching"
-            placeholder="Search &#8239;for digital assets"
+            placeholder="Search for Digital Assets"
           />
-          <!-- &#8239; - html code, which allow avoid text-transform: capitalize; rule -->
           <button type="submit" class="hidden">Search</button>
         </form>
         <a
@@ -100,23 +111,36 @@
     </header>
     <main>
       <section class="main">
-        <div class="main__main-information">
-          <p class="main-information__highlite-text">
-            Craft Your Success with Our <span>Digital</span> Assets
-          </p>
-          <h1 class="main-information__description">
+        <div class="main__main-information list list__column">
+          <strong class="main-information__highlite-text heading__first">
+            Craft Your Success&nbsp;with Our&nbsp;<span
+              class="highlite-text__span"
+              >Digital</span
+            >
+            Assets
+          </strong>
+          <p class="main-information__description heading__subhead">
             From our inspiring illustrations to dynamic UI/UX kits, elevate your
             projects with our premium digital design resources.
-          </h1>
-          <div class="main-information__main-buttons">
-            <a href="#" class="main-buttons__button">Shop Now</a>
-            <a href="#" class="main-buttons__button">
-              <img src="#" alt="play" />
+          </p>
+          <div class="main-information__main-buttons list">
+            <a
+              href="#"
+              class="main-buttons__button button button__primary button__large"
+              >Shop Now</a
+            >
+            <a
+              href="#"
+              class="main-buttons__button button button__navigation button__large"
+            >
+              <svg class="icon">
+                <use xlink:href="./images/icons/sprite.svg#play"></use>
+              </svg>
               Watch About Us
             </a>
           </div>
         </div>
-        <img src="#" alt="main picture" class="main__image" />
+        <!-- <img src="#" alt="main picture" class="main__image" /> -->
       </section>
       <section class="products">
         <ul class="products__list">
