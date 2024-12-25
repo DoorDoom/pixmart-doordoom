@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,33 +7,35 @@
       name="description"
       content="The homepage of Pixmart, that represents main features of the platform"
     />
+    <title>Pixmart</title>
+    <link
+      rel="apple-touch-icon"
+      type="image/svg+xml"
+      href="./images/icons/favicon.svg"
+    />
+    <link rel="icon" type="image/svg+xml" href="./images/icons/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="./images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/constants.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
-    <title>Pixmart</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/constants.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body class="container">
+  <body>
     <header class="header list">
       <a href="./index.html" class="header__logo">
-        <h1>
+        <h1 class="header__title">
           <img
             src="./images/icons/logo.svg"
-            alt="Pixmart"
+            alt="Pixmart logo"
             width="108"
             height="24"
           />
@@ -43,8 +45,7 @@
         <ul class="navigation__list list">
           <li class="navigation__list-item">
             <a
-              href="#"
-              target="_blank"
+              href="https://null-smth.com/"
               class="navigation__link button button__small button__navigation"
             >
               About
@@ -52,8 +53,7 @@
           </li>
           <li class="navigation__list-item">
             <a
-              href="#"
-              target="_blank"
+              href="./catalog.html"
               class="navigation__link button button__small button__navigation"
             >
               Products
@@ -61,8 +61,7 @@
           </li>
           <li class="navigation__list-item">
             <a
-              href="#"
-              target="_blank"
+              href="https://null-smth.com/"
               class="navigation__link button button__small button__navigation"
             >
               Creators
@@ -70,8 +69,7 @@
           </li>
           <li class="navigation__list-item">
             <a
-              href="#"
-              target="_blank"
+              href="./blog-details.html"
               class="navigation__link button button__small button__navigation"
             >
               Blog
@@ -80,7 +78,6 @@
           <li class="navigation__list-item">
             <a
               href="./contacts.html"
-              target="_blank"
               class="navigation__link button button__small button__navigation"
             >
               Contact
@@ -90,50 +87,55 @@
       </nav>
       <div class="header__assets-block list">
         <form action="#" method="get" class="assets-block__searching">
-          <label for="asset-searching" class="hidden">Find asset</label>
+          <label for="asset-searching" class="searching__label hidden"
+            >Find asset</label
+          >
           <input
             type="text"
             class="searching__input input input__small"
             id="asset-searching"
             placeholder="Search for Digital Assets"
           />
-          <button type="submit" class="hidden">Search</button>
+          <button type="submit" class="searching__button hidden">Search</button>
         </form>
         <a
-          href="#"
-          class="assets-block__cart button button__primary button__square-medium"
+          href="https://null-smth.com/"
+          class="assets-block__button button button__primary button__square-medium"
         >
-          <svg class="icon">
+          <svg class="assets-block__icon icon">
             <use xlink:href="./images/icons/sprite.svg#bag"></use>
           </svg>
         </a>
       </div>
     </header>
-    <main>
+    <main class="container__main">
       <section class="main">
         <div class="main__main-information list list__column">
-          <strong class="main-information__highlite-text heading__first">
-            Craft Your Success&nbsp;with Our&nbsp;<span
-              class="highlite-text__span"
-              >Digital</span
-            >
+          <h2 class="main-information__title hidden heading__section">
+            Introduction
+          </h2>
+          <strong class="main-information__highlite-text heading__main-title">
+            Craft Your Success with Our&nbsp;<span class="highlite-text__span"
+              >Digital
+            </span>
             Assets
           </strong>
-          <p class="main-information__description heading__subhead">
+          <p class="main-information__description text__main">
             From our inspiring illustrations to dynamic UI/UX kits, elevate your
             projects with our premium digital design resources.
           </p>
           <div class="main-information__main-buttons list">
             <a
-              href="#"
+              href="./catalog.html"
               class="main-buttons__button button button__primary button__large"
               >Shop Now</a
             >
             <a
-              href="#"
+              href="https://null-smth.com/"
               class="main-buttons__button button button__navigation button__large"
+              target="_blank"
             >
-              <svg class="icon">
+              <svg class="main-buttons__icon icon">
                 <use xlink:href="./images/icons/sprite.svg#play"></use>
               </svg>
               Watch About Us
@@ -143,268 +145,388 @@
       </section>
       <section class="products container__section">
         <h2 class="hidden">Products</h2>
-        <ul class="products__list">
+        <ul class="products__list list list__elements">
           <li>
             <a class="products__link" href="./catalog.html">
-              <article
-                class="products__list-item card__small-product list list__column"
-              >
+              <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use xlink:href="./images/icons/sprite.svg#ui-kit"></use>
                   </svg>
                 </div>
-                <h3 class="products__title heading__third">UI Kits</h3>
+                <h3 class="products__title heading__article-title">UI Kits</h3>
               </article>
             </a>
           </li>
           <li>
             <a class="products__link" href="./catalog.html">
-              <article
-                class="products__list-item card__small-product list list__column"
-              >
+              <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use
                       xlink:href="./images/icons/sprite.svg#social-media"
                     ></use>
                   </svg>
                 </div>
-                <h3 class="products__title heading__third">Social Media</h3>
+                <h3 class="products__title heading__article-title">
+                  Social Media
+                </h3>
               </article>
             </a>
           </li>
           <li>
             <a class="products__link" href="./catalog.html">
-              <article
-                class="products__list-item card__small-product list list__column"
-              >
+              <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use
                       xlink:href="./images/icons/sprite.svg#presentation"
                     ></use>
                   </svg>
                 </div>
-                <h3 class="products__title heading__third">Presentation</h3>
+                <h3 class="products__title heading__article-title">
+                  Presentation
+                </h3>
               </article>
             </a>
           </li>
           <li>
             <a class="products__link" href="./catalog.html">
-              <article
-                class="products__list-item card__small-product list list__column"
-              >
+              <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use xlink:href="./images/icons/sprite.svg#font"></use>
                   </svg>
                 </div>
-                <h3 class="products__title heading__third">Fonts</h3>
+                <h3 class="products__title heading__article-title">Fonts</h3>
               </article>
             </a>
           </li>
           <li>
             <a class="products__link" href="./catalog.html">
-              <article
-                class="products__list-item card__small-product list list__column"
-              >
+              <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use
                       xlink:href="./images/icons/sprite.svg#illustration"
                     ></use>
                   </svg>
                 </div>
-                <h3 class="products__title heading__third">Illustrations</h3>
+                <h3 class="products__title heading__article-title">
+                  Illustrations
+                </h3>
               </article>
             </a>
           </li>
         </ul>
       </section>
-      <section class="categories">
-        <div class="categories__categories-information">
-          <h2 class="categories-information__title">CATEGORIES</h2>
-          <h3 class="categories-information__highlite-text">
+      <section class="categories container__section list">
+        <div class="categories__categories-information list list__column">
+          <h2 class="categories-information__title heading__section">
+            categories
+          </h2>
+          <strong
+            class="categories-information__highlite-text heading__section-title"
+          >
             Discover Assets for Every Projects
-          </h3>
-          <p class="categories-information__description">
+          </strong>
+          <p class="categories-information__description text__section">
             From fonts and icons to mockups and templates, our comprehensive
             categories ensure that you find exactly what you need to your
             projects.
           </p>
-          <a href="./catalog.html" class="categories-information__button">
+          <a
+            href="./catalog.html"
+            class="categories-information__button button button__primary button__large"
+          >
             Shop Now
           </a>
         </div>
-        <ul class="categories__categories-cards">
-          <li></li>
-          <li>
-            <a href="./catalog.html" target="_blank">
-              <article class="categories-cards__categories-card">
-                <img
-                  src="#"
-                  alt="product image"
-                  class="categories-card__image"
-                />
-                <h3 class="categories-card__title">Text</h3>
-                <div class="categories-card__description">
-                  <p>Text</p>
-                  •
-                  <p>Text</p>
-                </div>
-              </article>
-            </a>
-          </li>
-          <li>
-            <a href="./catalog.html" target="_blank">
-              <article class="categories-cards__categories-card">
-                <img
-                  src="#"
-                  alt="product image"
-                  class="categories-card__image"
-                />
-                <h3 class="categories-card__title">Text</h3>
-                <div class="categories-card__description">
-                  <p>Text</p>
-                  •
-                  <p>Text</p>
-                </div>
-              </article>
-            </a>
-          </li>
-          <li>
-            <a href="./catalog.html" target="_blank">
-              <article class="categories-cards__categories-card">
-                <img
-                  src="#"
-                  alt="product image"
-                  class="categories-card__image"
-                />
-                <h3 class="categories-card__title">Text</h3>
-                <div class="categories-card__description">
-                  <p>Text</p>
-                  •
-                  <p>Text</p>
-                </div>
-              </article>
-            </a>
-          </li>
-          <li>
-            <a href="./catalog.html" target="_blank">
-              <article class="categories-cards__categories-card">
-                <img
-                  src="#"
-                  alt="product image"
-                  class="categories-card__image"
-                />
-                <h3 class="categories-card__title">Text</h3>
-                <div class="categories-card__description">
-                  <p>Text</p>
-                  •
-                  <p>Text</p>
-                </div>
-              </article>
-            </a>
-          </li>
-          <li></li>
-        </ul>
+        <div class="categories__list list">
+          <ul
+            class="categories__categories-cards list list__column list__elements"
+          >
+            <li>
+              <a href="./catalog.html" class="categories-cards__link">
+                <article
+                  class="categories-cards__categories-card list list__column"
+                >
+                  <svg class="categories-card__image">
+                    <use xlink:href="./images/icons/sprite.svg#ui-kit"></use>
+                  </svg>
+                  <h3 class="categories-card__title heading__article-title">
+                    Templates
+                  </h3>
+                  <div class="categories-card__description list">
+                    <p>For all needs</p>
+                    •
+                    <p>Modern</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="./catalog.html" class="categories-cards__link">
+                <article
+                  class="categories-cards__categories-card list list__column"
+                >
+                  <svg class="categories-card__image">
+                    <use
+                      xlink:href="./images/icons/sprite.svg#presentation"
+                    ></use>
+                  </svg>
+                  <h3 class="categories-card__title heading__article-title">
+                    Slides
+                  </h3>
+                  <div class="categories-card__description list">
+                    <p>Pitch-ready</p>
+                    •
+                    <p>Creative</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="categories__categories-cards list list__column list__elements"
+          >
+            <li>
+              <a href="./catalog.html" class="categories-cards__link">
+                <article
+                  class="categories-cards__categories-card list list__column"
+                >
+                  <svg class="categories-card__image">
+                    <use
+                      xlink:href="./images/icons/sprite.svg#social-media"
+                    ></use>
+                  </svg>
+                  <h3 class="categories-card__title heading__article-title">
+                    App icons
+                  </h3>
+                  <div class="categories-card__description list">
+                    <p>High-quality</p>
+                    •
+                    <p>Elegant</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="./catalog.html" class="categories-cards__link">
+                <article
+                  class="categories-cards__categories-card list list__column"
+                >
+                  <svg class="categories-card__image">
+                    <use
+                      xlink:href="./images/icons/sprite.svg#illustration"
+                    ></use>
+                  </svg>
+                  <h3 class="categories-card__title heading__article-title">
+                    Design tools
+                  </h3>
+                  <div class="categories-card__description list">
+                    <p>Easy to use</p>
+                    •
+                    <p>Unique</p>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section class="trending">
-        <header class="trending__trending-header">
-          <h2 class="trending-header__title">TRENDING</h2>
+      <section class="trending container__section">
+        <header class="trending__trending-header list">
+          <div class="list list__column">
+            <h2 class="trending-header__title heading__section">trending</h2>
+            <strong class="trending-controller__title heading__section-title"
+              >Popular Products</strong
+            >
+          </div>
           <div class="trending-header__trending-controller">
-            <h3 class="trending-controller__title">Popular Products</h3>
-            <div class="trending-controller__buttons">
-              <button class="trending-controller__button">
-                <img src="#" alt="left arrow" />
+            <div class="trending-controller__buttons list">
+              <button
+                class="trending-controller__button button button__secondary button__square-big"
+              >
+                <svg class="icon">
+                  <use xlink:href="./images/icons/sprite.svg#arrow"></use>
+                </svg>
               </button>
-              <button class="trending-controller__button">
-                <img src="#" alt="right arrow" />
+              <button
+                class="trending-controller__button button button__secondary button__square-big"
+              >
+                <svg class="icon">
+                  <use xlink:href="./images/icons/sprite.svg#arrow"></use>
+                </svg>
               </button>
             </div>
           </div>
         </header>
-        <ul class="trending__trending-list">
+        <ul class="trending__trending-list list list__elements">
           <li>
-            <a href="./catalog.html" target="_blank">
-              <article class="trending-list__trending-card">
-                <div class="trending-card__trending-image">
-                  <img src="#" alt="trending product" />
+            <a href="https://null-smth.com/" class="trending-list__link">
+              <article class="trending-list__trending-card list list__column">
+                <div class="trending-card__image-container">
+                  <img
+                    src="./images/popular-products/travel-hero.webp"
+                    alt="travel hero product"
+                    width="306"
+                    height="272"
+                    class="trending-card__trending-image"
+                  />
                   <span class="trending-card__label">
-                    <img src="#" alt="popular" />
+                    <svg class="icon">
+                      <use xlink:href="./images/icons/sprite.svg#trophy"></use>
+                    </svg>
+                  </span>
+                  <span
+                    class="trending-card__to-product button button__primary button__large"
+                  >
+                    Go to product
                   </span>
                 </div>
-                <div class="trending-card__trending-information">
-                  <h3 class="trending-information__title">Text</h3>
-                  <p class="trending-information__price">$00.00</p>
-                  <div class="trending-information__description">
-                    <p>Text</p>
-                    *
-                    <p>Text</p>
+                <div
+                  class="trending-card__trending-information list list__column"
+                >
+                  <div class="trending-card__main-information list">
+                    <h3
+                      class="trending-information__title heading__article-title"
+                    >
+                      travel hero
+                    </h3>
+                    <b class="trending-information__price">€29.99</b>
+                  </div>
+                  <div class="trending-information__description list">
+                    <p>Adventure</p>
+                    •
+                    <p>Journey</p>
                   </div>
                 </div>
               </article>
             </a>
           </li>
           <li>
-            <a href="./catalog.html" target="_blank">
-              <article class="trending-list__trending-card">
-                <div class="trending-card__trending-image">
-                  <img src="#" alt="trending product" />
+            <a href="https://null-smth.com/" class="trending-list__link">
+              <article class="trending-list__trending-card list list__column">
+                <div class="trending-card__image-container">
+                  <img
+                    src="./images/popular-products/healthcare-pro.webp"
+                    alt="healthcare pro product"
+                    width="306"
+                    height="272"
+                    class="trending-card__trending-image"
+                  />
                   <span class="trending-card__label">
-                    <img src="#" alt="popular" />
+                    <svg class="icon">
+                      <use xlink:href="./images/icons/sprite.svg#trophy"></use>
+                    </svg>
+                  </span>
+                  <span
+                    class="trending-card__to-product button button__primary button__large"
+                  >
+                    Go to product
                   </span>
                 </div>
-                <div class="trending-card__trending-information">
-                  <h3 class="trending-information__title">Text</h3>
-                  <p class="trending-information__price">$00.00</p>
-                  <div class="trending-information__description">
-                    <p>Text</p>
-                    *
-                    <p>Text</p>
+                <div
+                  class="trending-card__trending-information list list__column"
+                >
+                  <div class="trending-card__main-information list">
+                    <h3
+                      class="trending-information__title heading__article-title"
+                    >
+                      healthcare pro
+                    </h3>
+                    <b class="trending-information__price">€15.99</b>
+                  </div>
+
+                  <div class="trending-information__description list">
+                    <p>Medical</p>
+                    •
+                    <p>Wellness</p>
                   </div>
                 </div>
               </article>
             </a>
           </li>
           <li>
-            <a href="./catalog.html" target="_blank">
-              <article class="trending-list__trending-card">
-                <div class="trending-card__trending-image">
-                  <img src="#" alt="trending product" />
+            <a href="https://null-smth.com/" class="trending-list__link">
+              <article class="trending-list__trending-card list list__column">
+                <div class="trending-card__image-container">
+                  <img
+                    src="./images/popular-products/foodish-delight.webp"
+                    alt="foodish delight product"
+                    width="306"
+                    height="272"
+                    class="trending-card__trending-image"
+                  />
                   <span class="trending-card__label">
-                    <img src="#" alt="popular" />
+                    <svg class="icon">
+                      <use xlink:href="./images/icons/sprite.svg#trophy"></use>
+                    </svg>
+                  </span>
+                  <span
+                    class="trending-card__to-product button button__primary button__large"
+                  >
+                    Go to product
                   </span>
                 </div>
-                <div class="trending-card__trending-information">
-                  <h3 class="trending-information__title">Text</h3>
-                  <p class="trending-information__price">$00.00</p>
-                  <div class="trending-information__description">
-                    <p>Text</p>
-                    *
-                    <p>Text</p>
+                <div
+                  class="trending-card__trending-information list list__column"
+                >
+                  <div class="trending-card__main-information list">
+                    <h3
+                      class="trending-information__title heading__article-title"
+                    >
+                      foodish delight
+                    </h3>
+                    <b class="trending-information__price">€31.99</b>
+                  </div>
+                  <div class="trending-information__description list">
+                    <p>Catering</p>
+                    •
+                    <p>Food</p>
                   </div>
                 </div>
               </article>
             </a>
           </li>
           <li>
-            <a href="./catalog.html" target="_blank">
-              <article class="trending-list__trending-card">
-                <div class="trending-card__trending-image">
-                  <img src="#" alt="trending product" />
+            <a href="https://null-smth.com/" class="trending-list__link">
+              <article class="trending-list__trending-card list list__column">
+                <div class="trending-card__image-container">
+                  <img
+                    src="./images/popular-products/real-estate.webp"
+                    alt="real estate product"
+                    width="306"
+                    height="272"
+                    class="trending-card__trending-image"
+                  />
                   <span class="trending-card__label">
-                    <img src="#" alt="popular" />
+                    <svg class="icon">
+                      <use xlink:href="./images/icons/sprite.svg#trophy"></use>
+                    </svg>
+                  </span>
+                  <span
+                    class="trending-card__to-product button button__primary button__large"
+                  >
+                    Go to product
                   </span>
                 </div>
-                <div class="trending-card__trending-information">
-                  <h3 class="trending-information__title">Text</h3>
-                  <p class="trending-information__price">$00.00</p>
-                  <div class="trending-information__description">
-                    <p>Text</p>
-                    *
-                    <p>Text</p>
+                <div
+                  class="trending-card__trending-information list list__column"
+                >
+                  <div class="trending-card__main-information list">
+                    <h3
+                      class="trending-information__title heading__article-title"
+                    >
+                      real estate
+                    </h3>
+                    <b class="trending-information__price">€40.99</b>
+                  </div>
+                  <div class="trending-information__description list">
+                    <p>Modern</p>
+                    •
+                    <p>Homes</p>
                   </div>
                 </div>
               </article>
@@ -412,62 +534,31 @@
           </li>
         </ul>
       </section>
-      <section class="values">
-        <div class="values__values-information">
-          <h2 class="values-information__title">Values</h2>
-          <h3 class="values-information__highlite-text">
-            Guiding Your Experience to Digital Excellence
-          </h3>
-          <p class="values-information__description">
-            Unlock unparalleled access to premium digital design assets at
-            unbeatable prices, maximizing your creative process.
-          </p>
-        </div>
-        <ul class="values__values-list">
-          <li class="values-list__values-item">
-            <img src="#" alt="feature icon" class="values-item__image" />
-            <div class="values-item__description">
-              <h3 class="values-item__title">Text</h3>
-              <p class="values-item__subtitle">Text</p>
-            </div>
-          </li>
-          <li class="values-list__values-item">
-            <img src="#" alt="feature icon" class="values-item__image" />
-            <div class="values-item__description">
-              <h3 class="values-item__title">Text</h3>
-              <p class="values-item__subtitle">Text</p>
-            </div>
-          </li>
-          <li class="values-list__values-item">
-            <img src="#" alt="feature icon" class="values-item__image" />
-            <div class="values-item__description">
-              <h3 class="values-item__title">Text</h3>
-              <p class="values-item__subtitle">Text</p>
-            </div>
-          </li>
-          <li class="values-list__values-item">
-            <img src="#" alt="feature icon" class="values-item__image" />
-            <div class="values-item__description">
-              <h3 class="values-item__title">Text</h3>
-              <p class="values-item__subtitle">Text</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="pricing">
-        <h2 class="pricing__title">Pricing plan</h2>
-        <p class="pricing__highlite-text">
+      <section class="pricing-plan container__section list list__column">
+        <h2 class="pricing-plan__title heading__section">Pricing plan</h2>
+        <strong class="pricing-plan__highlite-text heading__section-title">
           Choose The Perfect Plan for Creative Potential
-        </p>
-        <ul class="pricing__plan-list">
+        </strong>
+        <ul class="pricing-plan__plan-list list">
           <li>
-            <article class="plan-list__plan-item">
-              <h3 class="plan-item__title">Standard Membership</h3>
-              <p class="plan-item__full-price"><span>$14.99</span>/ Month</p>
-              <div class="divider"></div>
-              <ul class="plan-item__plan-features">
-                <li class="plan-features__feature">Enhanced Resource Access</li>
-                <li class="plan-features__feature">Monthly Credits</li>
+            <article class="plan-list__plan-item list list__column">
+              <h3
+                class="plan-item__title heading__card-title heading__article-title"
+              >
+                Standard Membership
+              </h3>
+              <p class="plan-item__full-price">
+                <b class="plan-item__price heading__section-title">€14.99</b> /
+                Month
+              </p>
+              <!-- prettier-ignore -->
+              <ul class="plan-item__plan-features list list__column">
+                <li class="plan-features__feature">
+                  Enhanced Resource Access
+                </li>
+                <li class="plan-features__feature">
+                  Monthly Credits
+                </li>
                 <li class="plan-features__feature">
                   Priority Customer Support
                 </li>
@@ -475,80 +566,110 @@
                   Community Features Access
                 </li>
               </ul>
-              <a href="#" target="_blank" class="plan-item__subscribe">
+              <a
+                href="https://null-smth.com/"
+                target="_blank"
+                class="plan-item__subscribe button button__secondary button__large"
+              >
                 Subscribe
               </a>
             </article>
           </li>
           <li>
-            <article class="plan-list__plan-item">
-              <span class="plan-item__label">Best seller</span>
-              <h3 class="plan-item__title">Plus Membership</h3>
-              <p class="plan-item__full-price"><span>$29.99</span>/ Month</p>
-              <div class="divider"></div>
-              <ul class="plan-item__plan-features">
-                <li class="plan-features__feature">All Standard Benefits</li>
+            <article class="plan-list__plan-item best list list__column">
+              <span class="plan-item__label heading__card-title"
+                >Best seller</span
+              >
+              <h3
+                class="plan-item__title heading__card-title heading__article-title"
+              >
+                Plus Membership
+              </h3>
+              <p class="plan-item__full-price">
+                <b class="plan-item__price heading__section-title">€29.99</b> /
+                Month
+              </p>
+              <!-- prettier-ignore -->
+              <ul class="plan-item__plan-features list list__column">
+                <li class="plan-features__feature">
+                  All Standard Benefits
+                </li>
                 <li class="plan-features__feature">
                   Increased Monthly Credits
                 </li>
                 <li class="plan-features__feature">
                   Early Access to New Releases
                 </li>
-                <li class="plan-features__feature">Member-Only Offers</li>
+                <li class="plan-features__feature">
+                  Member-Only Offers
+                </li>
               </ul>
-              <a href="#" target="_blank" class="plan-item__subscribe">
+              <a
+                href="https://null-smth.com/"
+                target="_blank"
+                class="plan-item__subscribe button button__primary button__large"
+              >
                 Subscribe
               </a>
             </article>
           </li>
           <li>
-            <article class="plan-list__plan-item">
-              <h3 class="plan-item__title">Pro Membership</h3>
-              <p class="plan-item__full-price"><span>$49.99</span>/ Month</p>
-              <div class="divider"></div>
-              <ul class="plan-item__plan-features">
-                <li class="plan-features__feature">All Plus Benefits</li>
-                <li class="plan-features__feature">Unlimited Downloads</li>
-                <li class="plan-features__feature">Custom Licensing</li>
+            <article class="plan-list__plan-item list list__column">
+              <h3
+                class="plan-item__title heading__card-title heading__article-title"
+              >
+                Pro Membership
+              </h3>
+              <p class="plan-item__full-price">
+                <b class="plan-item__price heading__section-title">€49.99</b> /
+                Month
+              </p>
+              <!-- prettier-ignore -->
+              <ul class="plan-item__plan-features list list__column">
+                <li class="plan-features__feature">
+                  All Plus Benefits
+                </li>
+                <li class="plan-features__feature">
+                  Unlimited Downloads
+                </li>
+                <li class="plan-features__feature">
+                  Custom Licensing
+                </li>
                 <li class="plan-features__feature">
                   Direct Creator Collaboration
                 </li>
               </ul>
-              <a href="#" target="_blank" class="plan-item__subscribe">
+              <a
+                href="https://null-smth.com/"
+                target="_blank"
+                class="plan-item__subscribe button button__secondary button__large"
+              >
                 Subscribe
               </a>
             </article>
           </li>
         </ul>
       </section>
-      <section class="faq">
-        <div class="faq__faq-information">
-          <h2 class="faq-information__title">F.A.Q</h2>
-          <p class="faq-information__highlite-text">
+      <section class="faq container__section list">
+        <div class="faq__faq-information list list__column">
+          <h2 class="faq-information__title heading__section">F.A.Q</h2>
+          <p class="faq-information__highlite-text heading__section-title">
             Answers to Your Questions
           </p>
-          <a href="#" target="_blank" class="faq-information__cta-button">
-            Ask Us A Question
+          <a
+            href="https://null-smth.com/"
+            class="faq-information__cta-button button button__secondary button__large"
+          >
+            Ask us a question
           </a>
         </div>
-        <ul class="faq__faq-questions">
+        <ul class="faq__faq-questions list list__column">
           <li>
-            <details class="faq-questions__details">
-              <summary class="faq-questions__summary">
-                <h3>Can I request a refund?</h3>
-                <button class="faq-questions__control-button">
-                  <img src="#" alt="show button" />
-                </button>
-              </summary>
-            </details>
-          </li>
-          <li>
-            <details class="faq-questions__details">
-              <summary class="faq-questions__summary">
-                <h3>How do I access my purchased products?</h3>
-                <button class="faq-questions__control-button">
-                  <img src="#" alt="show button" />
-                </button>
+            <details class="faq-questions__details details">
+              <summary class="faq-questions__summary details__summary">
+                <h3 class="faq-questions__title heading__card-title">
+                  Can I request a refund?
+                </h3>
               </summary>
               Accessing your purchased products is seamless and hassle-free on
               our digital design assets marketplace. Simply log in to your
@@ -557,206 +678,376 @@
             </details>
           </li>
           <li>
-            <details class="faq-questions__details">
-              <summary class="faq-questions__summary">
-                <h3>Are there any discounts for bulk purchases?</h3>
-                <button class="faq-questions__control-button">
-                  <img src="#" alt="show button" />
-                </button>
+            <details class="faq-questions__details details">
+              <summary class="faq-questions__summary details__summary">
+                <h3 class="faq-questions__title heading__card-title">
+                  How do I access my purchased products?
+                </h3>
               </summary>
+              Accessing your purchased products is seamless and hassle-free on
+              our digital design assets marketplace. Simply log in to your
+              account, navigate to the 'My Purchases' section, and you'll find
+              all your purchased products ready for download.
             </details>
           </li>
           <li>
-            <details class="faq-questions__details">
-              <summary class="faq-questions__summary">
-                <h3>What payment methods do you accept here?</h3>
-                <button class="faq-questions__control-button">
-                  <img src="#" alt="show button" />
-                </button>
+            <details class="faq-questions__details details">
+              <summary class="faq-questions__summary details__summary">
+                <h3 class="faq-questions__title heading__card-title">
+                  Are there any discounts for bulk purchases?
+                </h3>
               </summary>
+              Accessing your purchased products is seamless and hassle-free on
+              our digital design assets marketplace. Simply log in to your
+              account, navigate to the 'My Purchases' section, and you'll find
+              all your purchased products ready for download.
             </details>
           </li>
           <li>
-            <details class="faq-questions__details">
-              <summary class="faq-questions__summary">
-                <h3>Can I sell my digital products on this marketplace?</h3>
-                <button class="faq-questions__control-button">
-                  <img src="#" alt="show button" />
-                </button>
+            <details class="faq-questions__details details">
+              <summary class="faq-questions__summary details__summary">
+                <h3 class="faq-questions__title heading__card-title">
+                  What payment methods do you accept here?
+                </h3>
               </summary>
+              Accessing your purchased products is seamless and hassle-free on
+              our digital design assets marketplace. Simply log in to your
+              account, navigate to the 'My Purchases' section, and you'll find
+              all your purchased products ready for download.
+            </details>
+          </li>
+          <li>
+            <details class="faq-questions__details details">
+              <summary class="faq-questions__summary details__summary">
+                <h3 class="faq-questions__title heading__card-title">
+                  Can I sell my digital products on this marketplace?
+                </h3>
+              </summary>
+              Accessing your purchased products is seamless and hassle-free on
+              our digital design assets marketplace. Simply log in to your
+              account, navigate to the 'My Purchases' section, and you'll find
+              all your purchased products ready for download.
             </details>
           </li>
         </ul>
       </section>
-      <section class="articles">
-        <header class="articles__articles-header">
-          <h2 class="articles-header__title">articles</h2>
-          <p class="articles-header__highlite-text">Latest Expert</p>
-          <a href="#" class="articles-header__see-all">
-            Explore All Articles <img src="#" alt="right arrow" />
+      <section class="articles container__section">
+        <header class="articles__articles-header list">
+          <h2 class="articles-header__title heading__section hidden">
+            articles
+          </h2>
+          <p class="articles-header__highlite-text heading__section-title">
+            Latest Expert
+          </p>
+          <a href="./blog-details.html" class="articles-header__see-all link">
+            Explore All Articles
+            <svg class="articles-header__arrow icon__small">
+              <use xlink:href="./images/icons/sprite.svg#arrow"></use>
+            </svg>
           </a>
         </header>
-        <ul class="articles__articles-list">
+        <ul class="articles__articles-list list__elements">
           <li>
-            <article class="articles-list__article">
-              <div class="article__article-image">
-                <img src="#" alt="article product" />
-                <span class="article__label"> tag </span>
-              </div>
-              <div class="article__article-information">
-                <h3 class="article-information__title">Text</h3>
-                <p class="article-information__description">5 APRIL 2024</p>
-              </div>
-            </article>
+            <a href="./blog-details.html" class="articles__link">
+              <article class="articles-list__article list list__column">
+                <div class="article__image-container">
+                  <img
+                    src="./images/articles/article-sonic.webp"
+                    alt="article binabox"
+                    width="624"
+                    height="702"
+                    class="article__image"
+                  />
+                  <span class="article__label"> tag </span>
+                </div>
+                <div class="article__article-information list list__column">
+                  <h3 class="article-information__title heading__article-title">
+                    Creative Blog
+                  </h3>
+                  <time
+                    class="article-information__description"
+                    datetime="2024-04-15"
+                  >
+                    15 april 2024
+                  </time>
+                </div>
+              </article>
+            </a>
           </li>
           <li>
-            <article class="articles-list__article">
-              <div class="article__article-image">
-                <img src="#" alt="article product" />
-                <span class="article__label"> tag </span>
-              </div>
-              <div class="article__article-information">
-                <h3 class="article-information__title">Text</h3>
-                <p class="article-information__description">5 APRIL 2024</p>
-              </div>
-            </article>
+            <a href="./blog-details.html" class="articles__link">
+              <article class="articles-list__article">
+                <div class="article__image-container">
+                  <img
+                    src="./images/articles/article-laurent.webp"
+                    alt="article laurent"
+                    width="624"
+                    height="289"
+                    class="article__image"
+                  />
+                  <span class="article__label"> tag </span>
+                </div>
+                <div class="article__article-information list list__column">
+                  <h3 class="article-information__title heading__article-title">
+                    Best Dishes
+                  </h3>
+                  <time
+                    class="article-information__description"
+                    datetime="2024-05-05"
+                  >
+                    5 may 2024
+                  </time>
+                </div>
+              </article>
+            </a>
           </li>
           <li>
-            <article class="articles-list__article">
-              <div class="article__article-image">
-                <img src="#" alt="article product" />
-                <span class="article__label"> tag </span>
-              </div>
-              <div class="article__article-information">
-                <h3 class="article-information__title">Text</h3>
-                <p class="article-information__description">5 APRIL 2024</p>
-              </div>
-            </article>
+            <a href="./blog-details.html" class="articles__link">
+              <article class="articles-list__article">
+                <div class="article__image-container">
+                  <img
+                    src="./images/articles/article-lotus.webp"
+                    alt="article binabox"
+                    width="624"
+                    height="289"
+                    class="article__image"
+                  />
+                  <span class="article__label"> tag </span>
+                </div>
+                <div class="article__article-information list list__column">
+                  <h3 class="article-information__title heading__article-title">
+                    Contact Us
+                  </h3>
+                  <time
+                    class="article-information__description"
+                    datetime="2024-06-10"
+                  >
+                    10 june 2024
+                  </time>
+                </div>
+              </article>
+            </a>
           </li>
         </ul>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__summary">
-        <div class="summary__information">
-          <a href="./index.html" class="information__logo"
-            ><img src="./images/logo.svg" alt="logo"
-          /></a>
+    <footer class="footer list list__column">
+      <div class="footer__summary list">
+        <div class="summary__information list list__column">
+          <a href="./index.html" class="information__link">
+            <strong class="information__title">
+              <img
+                src="./images/icons/logo.svg"
+                alt="Pixmart logo"
+                width="300"
+                height="58"
+                class="information__logo"
+              />
+            </strong>
+          </a>
           <p class="information__description">
             Your premium digital assets solution with high quality and
             comprehensive range of products and services.
           </p>
         </div>
         <div class="summary__summary-lists">
-          <h3 class="summary-lists__title">Company</h3>
-          <nav>
-            <ul class="summary-lists__list">
+          <h2 class="summary-lists__title heading__card-title">Company</h2>
+          <nav class="summary-lists__navigation">
+            <ul class="summary-lists__list list list__column">
               <li class="summary-lists__list-item">
-                <a href="./index.html">Homepage v1</a>
+                <a href="./index.html" class="list-item__link link">
+                  Homepage v1
+                </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="#" target="_blank">Homepage v2</a>
+                <a href="./index.html" class="list-item__link link">
+                  Homepage v2
+                </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="#" target="_blank">Homepage v3</a>
+                <a href="./index.html" class="list-item__link link">
+                  Homepage v3
+                </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="#" target="_blank">About Us</a>
+                <a href="https://null-smth.com/" class="list-item__link link">
+                  About Us
+                </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="#" target="_blank">About Us</a>
+                <a href="https://null-smth.com/" class="list-item__link link">
+                  About Us
+                </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="#" target="_blank">Blog Articles</a>
+                <a href="./blog-details.html" class="list-item__link link">
+                  Blog Articles
+                </a>
               </li>
             </ul>
           </nav>
         </div>
         <div class="summary__summary-lists">
-          <h3 class="summary-lists__title">Products</h3>
-          <ul class="summary-lists__list">
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Website</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Mobile App</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Social Media Feeds</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Presentation</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Product Mockups</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Illustrations</a>
-            </li>
-          </ul>
+          <h2 class="summary-lists__title heading__card-title">Products</h2>
+          <nav class="summary-lists__navigation">
+            <ul class="summary-lists__list list list__column">
+              <li class="summary-lists__list-item">
+                <a href="./catalog.html" class="list-item__link link">
+                  Website
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a href="./catalog.html" class="list-item__link link">
+                  Mobile App
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a href="./catalog.html" class="list-item__link link">
+                  Social Media Feeds
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a href="./catalog.html" class="list-item__link link">
+                  Presentation
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a href="./catalog.html" class="list-item__link link">
+                  Product Mockups
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a href="./catalog.html" class="list-item__link link">
+                  Illustrations
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div class="summary__summary-lists">
-          <h3 class="summary-lists__title">Account</h3>
-          <ul class="summary-lists__list">
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Your Cart</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Check Out</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Refund Policy</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Company Policy</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Send A Message</a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a href="#" target="_blank">Customer Support</a>
-            </li>
-          </ul>
+          <h2 class="summary-lists__title heading__card-title">Account</h2>
+          <nav class="summary-lists__navigation">
+            <ul class="summary-lists__list list list__column">
+              <li class="summary-lists__list-item">
+                <a href="https://null-smth.com/" class="list-item__link link">
+                  Your Cart
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a href="https://null-smth.com/" class="list-item__link link">
+                  Check Out
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="https://null-smth.com/"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Refund Policy
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="https://null-smth.com/"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Company Policy
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="https://null-smth.com/"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Send A Message
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a href="https://null-smth.com/" class="list-item__link link">
+                  Customer Support
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-      <div class="footer__cta">
-        <div class="cta__cta-buttons">
-          <a href="#" class="cta-buttons__button">
-            <img src="#" alt="twitter" />
+      <div class="footer__cta list">
+        <div class="cta__cta-buttons list">
+          <a
+            href="https://null-smth.com/"
+            target="_blank"
+            class="cta-buttons__button button button__secondary button__square-big"
+          >
+            <svg class="cta-buttons__icon icon">
+              <use xlink:href="./images/icons/sprite.svg#twitter"></use>
+            </svg>
           </a>
-          <a href="#" class="cta-buttons__button">
-            <img src="#" alt="facebook" />
+          <a
+            href="https://null-smth.com/"
+            target="_blank"
+            class="cta-buttons__button button button__secondary button__square-big"
+          >
+            <svg class="cta-buttons__icon icon">
+              <use xlink:href="./images/icons/sprite.svg#facebook"></use>
+            </svg>
           </a>
-          <a href="#" class="cta-buttons__button">
-            <img src="#" alt="telegram" />
+          <a
+            href="https://null-smth.com/"
+            target="_blank"
+            class="cta-buttons__button button button__secondary button__square-big"
+          >
+            <svg class="cta-buttons__icon icon">
+              <use xlink:href="./images/icons/sprite.svg#telegram"></use>
+            </svg>
           </a>
         </div>
-        <div class="cta__newsletter">
-          <label for="email" class="newsletter__label">
+        <div class="cta__newsletter list">
+          <label for="email" class="newsletter__label heading__article-title">
             Subscribe to Design Newsletter
           </label>
           <input
+            id="email"
             type="text"
             name="email"
-            class="newsletter__input"
+            class="newsletter__input input input__large"
             placeholder="Enter your email address ..."
           />
-          <button class="newsletter__button">Subscribe</button>
+          <button
+            class="newsletter__button button button__primary button__large"
+          >
+            Subscribe
+          </button>
         </div>
       </div>
-      <div class="footer__documents">
+      <div class="footer__documents list">
         <div class="documents__document-list">
-          <ul class="document-list__list">
+          <ul class="document-list__list list">
             <li class="document-list__list-item">
-              <a href="#" target="_blank">Privacy Policy</a>
+              <a
+                href="https://null-smth.com/"
+                target="_blank"
+                class="list-item__link list-item__document-link link"
+                >Privacy Policy</a
+              >
             </li>
-            |
             <li class="document-list__list-item">
-              <a href="#" target="_blank">Terms and Condition</a>
+              <a
+                href="https://null-smth.com/"
+                target="_blank"
+                class="list-item__link list-item__document-link link"
+                >Terms and Condition</a
+              >
             </li>
-            |
             <li class="document-list__list-item">
-              <a href="#" target="_blank">Site Map</a>
+              <a
+                href="https://null-smth.com/"
+                target="_blank"
+                class="list-item__link list-item__document-link link"
+                >Site Map</a
+              >
             </li>
           </ul>
         </div>

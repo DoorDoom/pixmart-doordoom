@@ -1,7 +1,6 @@
-# BroAcademy project
+# pixmart-diploma
 
-There is a diploma project.
+Diploma project for BRO Academy
 
-Contributor: DoorDoom
-
-Code reviewer:zzoysanna
+Student: Alina Vagner
+Tutor: Zoia Rassadkina
